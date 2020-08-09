@@ -70,7 +70,7 @@ const TeacherList: React.FC = () => {
                 { isFilterVisible && (
                     <View style={styles.searchForm}>
                         <Text style={styles.label}>
-                            Subject
+                            Matéria
                         </Text>
                         <TextInput
                             style={styles.input}
@@ -83,7 +83,7 @@ const TeacherList: React.FC = () => {
                         <View style={styles.inputGroup}>
                             <View style={styles.inputBlock}>
                                 <Text style={styles.label}>
-                                    Day of the week
+                                    Dia da semana
                                 </Text>
                                 <TextInput
                                     style={styles.input}
@@ -95,7 +95,7 @@ const TeacherList: React.FC = () => {
                             </View>
                             <View style={styles.inputBlock}>
                                 <Text style={styles.label}>
-                                    Time
+                                    Horário
                                 </Text>
                                 <TextInput
                                     style={styles.input}
