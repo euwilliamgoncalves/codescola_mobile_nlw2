@@ -1,21 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { AppLoading } from 'expo';
+
+import Landing from './src/pages/Landing';
+
+import { Montserrat_400Regular, Montserrat_600SemiBold, useFonts } from '@expo-google-fonts/montserrat';
+import { Play_400Regular, Play_700Bold } from '@expo-google-fonts/play';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hello Nlw!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  let [fontsLoaded] = useFonts({
+    Play_400Regular,
+    Play_700Bold,
+    Montserrat_400Regular,
+    Montserrat_600SemiBold,
+  });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  if (!fontsLoaded) {
+    return <AppLoading />
+  }else{
+    return (
+      <>
+        <Landing />
+        <StatusBar style="light" />  
+      </>
+    );
+  }
+}
