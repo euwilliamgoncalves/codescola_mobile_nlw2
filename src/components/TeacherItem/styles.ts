@@ -7,8 +7,7 @@ const styles = StyleSheet.create({
         borderColor: '#4caac2',
         borderRadius: 8,
         marginHorizontal: 16,
-        marginTop: -16,
-        marginBottom: 32,
+        marginBottom: 16,
         overflow: 'hidden'
     },
 
@@ -81,6 +80,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginRight: 8
+    },
+
+    favorited: {
+        backgroundColor: '#e33d3d'
     },
 
     contactButton: {
